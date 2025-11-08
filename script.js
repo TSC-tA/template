@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded' , ()  => {
 
     // Load expenses
     function getExpensesFromLocalStorage(month, year ) {
-        const key = `$(month)-$(year)`;
+        const key = `${month}-${year}`;
         return JSON.parse(localStorage.getItem(key)) || {};
 
     }
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded' , ()  => {
 
     // Save expenses
     function saveExpensesToLocalStorage(month, year ) {
-        const key = `$(month)-$(year)`;
+        const key = `${month}-${year}`;
         localStorage.setItem(key, JSON.stringify(expenses[month]));
     }
 
